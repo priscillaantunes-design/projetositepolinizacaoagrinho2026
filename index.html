@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Defensores das Abelhas | Sustentabilidade no Campo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">🐝 <span>EcoAbelhas</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#importancia">Importância</a></li>
+                    <li><a href="#pesticidas">O Perigo</a></li>
+                    <li><a href="#solucoes">Soluções</a></li>
+                    <li><a href="#agir" class="btn-nav">Faça sua Parte</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Sem abelhas, sem alimento. <br><strong>Proteja o campo.</strong></h1>
+            <p>A polinização garante a sustentabilidade da produção agrícola. O controle rígido de pesticidas não é apenas uma escolha ecológica, é a garantia do nosso futuro alimentar.</p>
+            <a href="#agir" class="btn-primary">Assine o Compromisso</a>
+        </div>
+    </section>
+
+    <section id="importancia" class="features">
+        <div class="container">
+            <h2>Por que as abelhas são vitais?</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>75% dos Alimentos</h3>
+                    <p>Três em cada quatro culturas que produzem frutos ou sementes para consumo humano dependem de polinizadores.</p>
+                </div>
+                <div class="card">
+                    <h3>Biodiversidade</h3>
+                    <p>Além da agricultura, as abelhas mantêm o equilíbrio de ecossistemas inteiros, permitindo a reprodução de plantas silvestres.</p>
+                </div>
+                <div class="card">
+                    <h3>Economia Rural</h3>
+                    <p>A produção sustentável e o manejo correto geram valor econômico direto para bilhões de pequenos e grandes agricultores.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pesticidas" class="alert-section">
+        <div class="container">
+            <div class="alert-content">
+                <h2>O Impacto dos Pesticidas e Inseticidas</h2>
+                <p>O uso indiscriminado de defensivos químicos agrícolas — especialmente os **neonicotinoides** — ataca o sistema nervoso das abelhas. Elas perdem o senso de direção, não conseguem voltar para as colmeias e morrem em massa. Isso gera o chamado *Distúrbio do Colapso das Colônias*.</p>
+                <blockquote>
+                    "O manejo e o controle rigoroso desses químicos são urgentes para evitar um apagão biológico no campo."
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <section id="agir" class="action-section">
+        <div class="container">
+            <h2>Faça parte desta mudança</h2>
+            <p>Junte-se a agricultores e cidadãos que se comprometeram a apoiar práticas agrícolas sem pesticidas nocivos.</p>
+            
+            <div class="counter-box">
+                <p>Total de pessoas que assumiram o compromisso:</p>
+                <span id="counter">1,420</span>
+            </div>
+
+            <form id="pledgeForm">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Seu Nome Completo" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Seu Melhor E-mail" required>
+                </div>
+                <div class="form-group">
+                    <select id="profile" required>
+                        <option value="" disabled selected>Você é...</option>
+                        <option value="agricultor">Agricultor / Produtor Rural</option>
+                        <option value="estudante">Estudante / Pesquisador</option>
+                        <option value="entusiasta">Cidadão Consciente</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-submit">Assinar Manifesto</button>
+            </form>
+            <div id="successMessage" class="hidden">Obrigado! Seu compromisso foi registrado com sucesso. 🌻</div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 EcoAbelhas. Desenvolvido em prol da sustentabilidade no campo e preservação dos polinizadores.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
