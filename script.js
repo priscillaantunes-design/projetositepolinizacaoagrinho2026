@@ -1,3 +1,4 @@
+let currentCount = parseInt(counterElement.innerText.replace(/\D/g, '')) || 0;
 pledgeForm.addEventListener('submit', async (e) => { // Adicionado 'async'
     e.preventDefault();
 
