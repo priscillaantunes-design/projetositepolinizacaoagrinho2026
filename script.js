@@ -1,31 +1,34 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const pledgeForm = document.getElementById('pledgeForm');
-    const counterElement = document.getElementById('counter');
-    const successMessage = document.getElementById('successMessage');
+pledgeForm.addEventListener('submit', async (e) => { // Adicionado 'async'
+    e.preventDefault();
 
-    // Valor inicial do contador puxado do texto
-    let currentCount = parseInt(counterElement.innerText.replace(',', ''));
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const profile = document.getElementById('profile').value;
 
-    pledgeForm.addEventListener('submit', (e) => {
-        // Evita que a página recarregue ao enviar o formulário
-        e.preventDefault();
+    if (name && email && profile) {
+        const formData = { name, email, profile };
 
-        // Captura os dados (podem ser enviados para uma API no futuro)
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const profile = document.getElementById('profile').value;
+        try {
+            // Simulando o envio para uma API
+            /*
+            const response = await fetch('https://api.exemplo.com/pledge', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
+            });
+            if (!response.ok) throw new Error('Erro no servidor');
+            */
 
-        if (name && email && profile) {
-            // Incrementa o contador de apoiadores
+            // O código abaixo só roda se o envio acima der certo:
             currentCount++;
-            
-            // Atualiza a exibição com formatação de milhar simples
             counterElement.innerText = currentCount.toLocaleString('pt-BR');
 
-            // Esconde o formulário e exibe a mensagem de sucesso
             pledgeForm.reset();
             pledgeForm.style.display = 'none';
             successMessage.classList.remove('hidden');
+
+        } catch (error) {
+            alert('Ops! Ocorreu um erro ao salvar seu apoio. Tente novamente.');
         }
-    });
+    }
 });
